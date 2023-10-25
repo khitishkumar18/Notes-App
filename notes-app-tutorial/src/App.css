@@ -1,0 +1,178 @@
+/* Import the Normalize.css library to reset default browser styles. */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+/* Apply a box-sizing border-box model to all elements, which includes padding and borders in the element's total width and height. */
+* {
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+
+/* Apply styles to the entire body and the root element with class "App." */
+body,
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+  font-size: 16px;
+  background: url(https://www.toptal.com/designers/subtlepatterns/patterns/lightpaperfibers.png); /* Set background image */
+}
+
+/* Apply styles to all buttons in the document */
+button {
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  color: #08c; /* Default button text color */
+}
+
+/* Apply styles to buttons when hovered */
+button:hover {
+  color: #04c; /* Change button text color on hover */
+}
+
+/* Apply styles to the entire "App" class */
+.App {
+  display: flex; /* Use flexbox for layout */
+}
+
+/* Sidebar Styles */
+
+/* Apply styles to the sidebar with class "app-sidebar" */
+.app-sidebar {
+  width: 30%;
+  height: 100vh;
+  border-right: 1px solid #ddd; /* Add a border on the right side */
+}
+
+/* Apply styles to the header section of the sidebar */
+.app-sidebar-header {
+  display: flex;
+  justify-content: space-between; /* Space-between layout for header */
+  padding: 25px;
+}
+
+/* Apply styles to the h1 element within the sidebar header */
+.app-sidebar-header h1 {
+  margin: 0;
+}
+
+/* Apply styles to the notes section within the sidebar */
+.app-sidebar-notes {
+  height: calc(100vh - 78px); /* Calculate the height to fit the available space */
+  overflow-y: scroll; /* Add a vertical scrollbar if necessary */
+}
+
+/* Apply styles to individual notes within the sidebar */
+.app-sidebar-note {
+  padding: 25px;
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Apply styles to the title section of individual notes */
+.sidebar-note-title {
+  display: flex;
+  justify-content: space-between; /* Space-between layout for note titles */
+}
+
+/* Apply styles to buttons within individual notes */
+.app-sidebar-note button {
+  color: crimson; /* Set button text color */
+}
+
+/* Apply styles to paragraphs within individual notes */
+.app-sidebar-note p {
+  margin: 10px 0;
+}
+
+/* Apply styles to small text within individual notes */
+.app-sidebar-note small {
+  display: block;
+  color: #999; /* Set small text color */
+}
+
+/* Apply styles to individual notes when hovered */
+.app-sidebar-note:hover {
+  background: #ddd; /* Change background color on hover */
+}
+
+/* Apply styles to active notes */
+.app-sidebar-note.active,
+.app-sidebar-note.active small {
+  background: #08c; /* Set background color for active notes */
+  color: white; /* Set text color for active notes */
+}
+
+/* Note Editor/Preview (Main) Styles */
+
+/* Apply styles to the main section with class "app-main" */
+.app-main {
+  width: 70%;
+  height: 100vh;
+}
+
+/* Apply styles to note editor and preview sections */
+.app-main-note-edit,
+.app-main-note-preview {
+  height: 50vh;
+}
+
+/* Apply styles to the "no-active-note" class */
+.no-active-note {
+  width: 70%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+  color: #999; /* Set text color for the "no-active-note" message */
+}
+
+/* Apply styles to the note editing section */
+.app-main-note-edit {
+  padding: 25px;
+}
+
+/* Apply styles to input and textarea elements in the note editing section */
+.app-main-note-edit input,
+textarea {
+  display: block;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  width: 100%;
+  height: calc(50vh - 130px);
+  padding: 10px;
+  resize: none; /* Disable textarea resizing */
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* Apply styles to input elements in the note editing section */
+.app-main-note-edit input {
+  height: 50px;
+  font-size: 2rem;
+}
+
+/* Apply styles to the note preview section */
+.app-main-note-preview {
+  border-top: 1px solid #ddd; /* Add a top border to separate from the editor */
+  overflow-y: scroll; /* Add a vertical scrollbar if necessary */
+  background: rgba(0, 0, 0, 0.02); /* Set a background color for the preview section */
+}
+
+/* Apply styles to the note preview title */
+.preview-title {
+  padding: 25px 25px 0 25px; /* Add padding to the title */
+  margin: 0; /* Remove margin */
+}
+
+/* Apply styles to the markdown preview content */
+.markdown-preview {
+  padding: 0 25px 25px 25px; /* Add padding to the content */
+  font-size: 1rem;
+  line-height: 2rem;
+}
